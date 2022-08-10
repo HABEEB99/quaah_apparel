@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	mode: 'jit',
+	darkMode: 'class',
 	content: [
 		'./src/pages/**/*.{js,ts,jsx,tsx}',
 		'./src/components/**/*.{js,ts,jsx,tsx}',
@@ -8,11 +9,11 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				body: '#FAF5E4',
-				btn: '#F8CB2E',
-				btnHov: '#F8B400',
-				header: '#006E7F',
-				footer: '#FF6363',
+				lightBg: '#FFFFFF',
+				darkBg: '#37323E',
+				btn: '#DEB841',
+				btnHov: '#DE9E36',
+				header: '#6D6A75',
 			},
 		},
 	},
