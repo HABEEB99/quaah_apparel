@@ -24,7 +24,7 @@ const PagesLayout: React.FC<PagesLayoutProps> = ({
 				{description && <meta name="description" content={description} />}
 			</Head>
 			<Header />
-			<main className="min-h-[85vh] mt-[11vh] px-3 sm:px-4 md:px-12 lg:px-32">
+			<main className="min-h-[85vh] mt-[11vh] pb-6 mx-auto px-3 sm:px-4 md:px-12 lg:px-32">
 				{children}
 			</main>
 			<Footer />

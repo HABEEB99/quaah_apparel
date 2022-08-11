@@ -12,4 +12,5 @@ export interface Productprop {
 	category: string;
 	description: string;
 	numInStock: number;
+	quantity: number;
 }
