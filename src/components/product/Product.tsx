@@ -25,11 +25,7 @@ const Product: React.FC<ProductProps> = ({ product }) => {
 			</div>
 
 			<div className="flex items-center justify-between px-1 h-8 mt-3">
-				<div className="flex items-center space-x-2">
-					<span className="font-bold">#{product.price}</span>
-					<FaCartPlus className="text-btn hover:text-btnHov font-bold" />
-				</div>
-
+				<span className="font-bold">#{product.price}</span>
 				<Link href={`/products/${product.slug.current}`}>
 					<button className="text-sm hover:bg-btn w-24 font-bold h-8 rounded-full hover:text-white">
 						View Details

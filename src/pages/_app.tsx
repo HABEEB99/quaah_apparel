@@ -3,13 +3,20 @@ import type { AppProps } from 'next/app';
 
 import NextNProgress from 'nextjs-progressbar';
 import { ThemeProvider } from 'next-themes';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import { Toaster } from 'react-hot-toast';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<ThemeProvider attribute="class">
-			<NextNProgress />
-			<Component {...pageProps} />
-		</ThemeProvider>
+		<GoogleOAuthProvider
+			clientId={`${process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID}`}
+		>
+			<ThemeProvider attribute="class">
+				<NextNProgress />
+				<Toaster />
+				<Component {...pageProps} />
+			</ThemeProvider>
+		</GoogleOAuthProvider>
 	);
 }
 

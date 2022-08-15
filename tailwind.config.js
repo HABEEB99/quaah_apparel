@@ -14,6 +14,8 @@ module.exports = {
 				btn: '#DEB841',
 				btnHov: '#DE9E36',
 				header: '#6D6A75',
+				cart: '#34403A',
+				desc: '#285238',
 			},
 		},
 	},
