@@ -7,6 +7,8 @@ import product from './product';
 import user from './user';
 import postedBy from './postedBy';
 import comment from './comment';
+import order from './order';
+import orderedItem from './orderedItem';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -20,5 +22,7 @@ export default createSchema({
 		user,
 		postedBy,
 		comment,
+		order,
+		orderedItem,
 	]),
 });

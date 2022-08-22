@@ -23,5 +23,11 @@ export default {
 			title: 'Picture',
 			type: 'string',
 		},
+		{
+			name: 'orders',
+			title: 'Orders',
+			type: 'array',
+			of: [{ type: 'order' }],
+		},
 	],
 };

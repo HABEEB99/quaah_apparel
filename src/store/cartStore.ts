@@ -15,7 +15,7 @@ interface CartStore {
 	cart: Array<Product>;
 	addToCart: (product: Product) => void;
 	removeFromCart: (product: Product) => void;
-	// productQuantity: number;
+	emptyCart: () => void;
 	increaseProductQuantity: (product: Product) => void;
 	decreaseProductQuantity: (product: Product) => void;
 }
@@ -32,14 +32,13 @@ export const useCartStore = create<CartStore>()(
 					cart: state.cart.filter((p) => p.id !== product.id),
 				}));
 			},
-			// productQuantity: 1,
+			emptyCart: () => {
+				set((state) => ({ cart: [] }));
+			},
 			increaseProductQuantity: (product) => {
 				set((state) => ({}));
-				// set((state) => ({ productQuantity: (state.productQuantity += 1) }));
 			},
-			decreaseProductQuantity: () => {
-				// set((state) => ({ productQuantity: (state.productQuantity -= 1) }));
-			},
+			decreaseProductQuantity: () => {},
 		})),
 	),
 );
